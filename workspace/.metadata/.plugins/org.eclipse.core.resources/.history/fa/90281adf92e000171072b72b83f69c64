@@ -1,0 +1,6 @@
+
+public class Person {
+	public name = null;
+	public age = 0;
+
+}

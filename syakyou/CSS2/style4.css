@@ -1,0 +1,27 @@
+ul{
+    list-style-type: none;
+    color: red;
+    font-size: 30px;
+}
+
+.abc{
+    font-size: 30px;
+}
+
+.xyz{
+    color: blue;
+}
+
+#main{
+    text-align: center;
+}
+
+.sub{
+    color: red;
+    font-size: 20px;
+}
+
+.word{
+    color: blue;
+    font-family: sans-serif;
+}

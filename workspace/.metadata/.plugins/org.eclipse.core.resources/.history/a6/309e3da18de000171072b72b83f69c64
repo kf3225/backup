@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class HelloWorld {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		String a, b, c = new String();
+		a = "123";
+		b = "456";
+		c = "789";
+		
+		int i = new int();
+		i = Integer.parseInt(a);
+		
+	}
+
+}

@@ -1,0 +1,127 @@
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class HelloWorld {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		for(int a=1; a<=5; a++){
+			for(int b=1; b<=5; b++){
+				System.out.print("★");
+			}
+			System.out.print("\n");
+		}
+		
+		System.out.print("\n");
+		
+		for(int c=1; c<=5; c++){
+			for(int d=1; d<=5; d++){
+				if((c+d)%2==0){
+					System.out.print("★");
+				}else{
+					System.out.print("☆");
+				}
+			}
+			System.out.print("\n");
+		}
+		
+		System.out.print("\n");
+		
+		for(int e=1; e<=5; e++){
+			for(int f=1; f<=5; f++){
+				if(e==f){
+					System.out.print("☆");
+				}else{
+					System.out.print("★");
+				}
+			}
+			System.out.print("\n");
+		}
+		
+		System.out.print("\n");
+		
+		for(int g=1; g<=5; g++){
+			for(int h=1; h<=5; h++){
+				if(g==h){
+					System.out.print("★\n");
+					break;
+				}else{
+					System.out.print("★");
+				}
+			}
+		}
+		
+		System.out.print("\n");
+		
+		for(int i=1; i<=5; i++){
+			for(int j=1; j<=5; j++){
+				if(i==j){
+					System.out.print("☆\n");
+					break;
+				}else{
+					System.out.print("★");
+				}
+			}
+		}
+		
+		System.out.print("\n");
+		
+		int k=1;
+		while(k<=25){
+			if(k%5==0){
+				System.out.print("★\n");
+			}else{
+				System.out.print("★");
+			}
+			k++;
+		}
+		
+		System.out.print("\n");
+		
+		int l=1;
+		while(l<=25){
+			if(l%2==0){
+				System.out.print("☆");
+			}else{
+				System.out.print("★");
+			}
+			if(l%5==0){
+				System.out.print("\n");
+			}
+			l++;
+		}
+		
+		System.out.print("\n");
+		
+		int m=1;
+		while(m<=25){
+			if((m-1)%6==0){
+				System.out.print("☆");
+			}else{
+				System.out.print("★");
+			}
+			if(m%5==0){
+				System.out.print("\n");
+			}
+			m++;
+		}
+		
+		System.out.print("\n");
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

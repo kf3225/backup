@@ -1,0 +1,24 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		Person taro, hanako, jiro = new Person();
+		taro.name = "Yamada Taro";
+		taro.age = 20;
+		
+		hanako.name = "Suzuki Hanako";
+		hanako.age = 18;
+		
+		jiro.name = "Kimura Jiro";
+		jiro.age = 16;
+		
+		System.out.println(taro.name);
+		System.out.println(taro.name);
+		System.out.println(hanako.name);
+		System.out.println(hanako.age);
+		System.out.println(jiro.name);
+		System.out.println(jiro.age);
+	}
+
+}
