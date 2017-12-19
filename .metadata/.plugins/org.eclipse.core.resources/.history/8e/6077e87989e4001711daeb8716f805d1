@@ -1,0 +1,14 @@
+
+public class Capsule {
+	private String cname=null;
+	private int cage=0;
+	
+	public String getName(){
+		return this.cname;
+	}
+	
+	public void setName(String name){
+		this.cname=name;
+	}
+
+}
