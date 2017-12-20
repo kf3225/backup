@@ -97,6 +97,11 @@ public class test {
 		doraemon.talk();
 		doraemon.walk();
 		doraemon.run();
+		
+		
+		
+		
+		
 
 	}
 
