@@ -27,6 +27,7 @@ public class Test {
 		taro.run();
 		System.out.println();
 
+
 		Person jiro = new Person();
 		jiro.name = "木村次郎";
 		jiro.age = 18;
@@ -56,29 +57,37 @@ public class Test {
 		hanako.run();
 		System.out.println();
 
+
 		Robot aibo = new Robot();
 		aibo.robotName = "AIBO";
 		aibo.talk();
 		aibo.walk();
 		aibo.run();
+		System.out.println();
+
 
 		Robot asimo = new Robot();
 		asimo.robotName = "ASIMO";
 		asimo.talk();
 		asimo.walk();
 		asimo.run();
+		System.out.println();
+
 
 		Robot pepper = new Robot();
 		pepper.robotName = "PEPPER";
 		pepper.talk();
 		pepper.walk();
 		pepper.run();
+		System.out.println();
+
 
 		Robot doraemon = new Robot();
 		doraemon.robotName = "ドラえもん";
 		doraemon.talk();
 		doraemon.walk();
 		doraemon.run();
+		System.out.println();
 
 	}
 
