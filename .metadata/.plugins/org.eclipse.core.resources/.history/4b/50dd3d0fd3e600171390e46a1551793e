@@ -1,0 +1,27 @@
+import java.io.IOException;
+
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO 自動生成されたメソッド・スタブ
+		int x = 7;
+		int y = x * 3;
+		System.out.println(y);
+		int z = y / 2;
+		System.out.println(z);
+
+	}
+
+}

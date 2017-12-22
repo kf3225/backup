@@ -1,0 +1,31 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO 自動生成されたメソッド・スタブ
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("x = ");
+		float x = Integer.parseInt(br.readLine());
+		System.out.print("y = ");
+		float y = Integer.parseInt(br.readLine());
+		float z = (x + y) / 2;
+		
+		System.out.println("平均は" + z + "です。");
+	}
+
+}

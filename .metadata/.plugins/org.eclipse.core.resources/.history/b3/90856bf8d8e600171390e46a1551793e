@@ -1,0 +1,31 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO 自動生成されたメソッド・スタブ
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int x = Integer.parseInt(br.readLine());
+		String s = br.readLine();
+		int y = Integer.parseInt(br.readLine());
+		
+		if(s.equals("+")){
+			System.out.println("x + y = " + x + y);
+		}
+	}
+
+}

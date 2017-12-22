@@ -1,0 +1,27 @@
+import java.io.IOException;
+
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO 自動生成されたメソッド・スタブ
+		int x = 123;
+		if (int x <= 200){
+			System.out.println(++x);
+			break;
+		}
+
+	}
+
+}

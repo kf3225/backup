@@ -1,0 +1,32 @@
+import java.io.IOException;
+
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO 自動生成されたメソッド・スタブ
+		int x;
+		int y;
+		
+		x = 30;
+		y = 40;
+		
+		if(x > y){
+			System.out.println("xはyより大きい");
+		}else{
+			System.out.println("xはyより小さい");
+		}
+	}
+
+}
