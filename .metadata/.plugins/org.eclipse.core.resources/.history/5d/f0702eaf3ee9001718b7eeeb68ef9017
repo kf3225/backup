@@ -1,0 +1,30 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO 自動生成されたメソッド・スタブ
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int num = Integer.parseInt(readLine());
+		
+		System.out.println(num + "の2乗は" + pow2(num));
+	}	
+	
+	static int pow2(int num){
+		return num * num;
+	}
+}

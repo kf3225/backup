@@ -1,0 +1,33 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO 自動生成されたメソッド・スタブ
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int num = Integer.parseInt(readLine());
+		Sub number = new Sub();
+		number.num = 23;
+		
+		number.pow2();
+	}
+
+	private static String readLine() {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
+	}
+}

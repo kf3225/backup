@@ -1,0 +1,8 @@
+
+public class Person {
+	public int num = 0;
+	
+	public Person(int num){
+		this.num = num;
+	}
+}
