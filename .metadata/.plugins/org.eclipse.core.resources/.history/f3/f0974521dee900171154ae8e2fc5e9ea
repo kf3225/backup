@@ -1,0 +1,27 @@
+import java.io.IOException;
+
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class Main1 {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 * @throws NumberFormatException 
+	 */
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println("4と9平均は" + average(4, 9));
+	}
+	
+	static int average(int x, int y){
+		return (x + y) / 2;
+	}
+
+}

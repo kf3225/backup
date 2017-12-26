@@ -1,0 +1,34 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class Main1 {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 * @throws NumberFormatException 
+	 */
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		// TODO 自動生成されたメソッド・スタブ
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Sub1 i = new Sub1();
+		int num1 = Integer.parseInt(br.readLine());
+		int num2 = Integer.parseInt(br.readLine());
+		
+		i.setNum1(num1);
+		i.setNum2(num2);
+		
+		System.out.println(i.getCom());
+
+	}
+
+}

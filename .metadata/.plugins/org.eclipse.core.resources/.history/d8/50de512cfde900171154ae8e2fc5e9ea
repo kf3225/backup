@@ -1,0 +1,33 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ * 
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class Main3 {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 * @throws NumberFormatException 
+	 */
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		// TODO 自動生成されたメソッド・スタブ
+		Sub3 profile = new Sub3();
+		BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
+		String name = br.readLine();
+		int age = Integer.parseInt(br.readLine());
+		
+		profile.setName(name);
+		profile.setAge(age);
+		
+		profile.showProfile();
+	}
+
+}

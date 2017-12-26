@@ -1,5 +1,11 @@
 
 public class Sub1 {
-	public int num1 = 0;
-	public int num2 = 0;
+	private int num = 0;
+
+	public void setNum(int num){
+		this.num = num;
+	}
+	public int getNum(){
+		return this.num;
+	}
 }
