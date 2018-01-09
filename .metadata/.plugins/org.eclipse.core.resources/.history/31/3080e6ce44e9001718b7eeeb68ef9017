@@ -1,8 +1,0 @@
-
-public class Person {
-	public int num = 0;
-	
-	public int Person(){
-		return this.num * this.num;
-	}
-}

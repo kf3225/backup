@@ -1,8 +1,0 @@
-
-public class Sub {
-	public int num = 0;
-	
-	public void pow2(){
-		System.out.println(this.num + "の2乗は" + this.num * this.num);
-	}
-}
