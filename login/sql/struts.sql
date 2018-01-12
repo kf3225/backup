@@ -1,4 +1,4 @@
-set name utf8;
+set names utf8;
 set foreign_key_checks = 0;
 drop database if exists logindb;
 create database logindb;
@@ -13,5 +13,5 @@ password varchar(255)
 insert into user values
 (1, "Taro", "aaaa"),
 (2, "Jiro", "bbbb"),
-(3, "Sabro", "cccc"),
+(3, "Saburo", "cccc"),
 (4, "Hanako", "dddd");
