@@ -7,6 +7,8 @@ user_name varchar(255),
 password varchar(255)
 );
 
-insert into test_table value (1, "Taro", "123");
-insert into test_table value (2, "Jiro", "456");
-insert into test_table value (3, "Saburo", "789");
+insert into test_table values
+(1, "Taro", "aaaa"),
+(2, "Jiro", "bbbb"),
+(3, "Saburo", "cccc"),
+(4, "Hanako", "dddd");
