@@ -23,7 +23,7 @@ public class DBConnector {
 	/**
 	 * データベース接続パスワード
 	 */
-	private String password = "mysql";
+	private static String password = "mysql";
 
 	public Connection getConnection() {
 		Connection con = null;

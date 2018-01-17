@@ -10,9 +10,9 @@
 </head>
 <body>
 	名前とパスワードを入力してください<br>
-	<s:form action="WelcomeAction">
-		<s:textfield name="name" label="ユーザー名"/><br>
-		<s:password name="password" label="パスワード"/>
+	<s:form method="post" action="LoginAction">
+		<s:textfield name="username" label="ユーザー名"/><br>
+		<s:password name="password" label="パスワード"/><br>
 		<s:submit value="送信"/>
 	</s:form>
 </body>
