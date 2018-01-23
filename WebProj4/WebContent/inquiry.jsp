@@ -9,7 +9,7 @@
 </head>
 <body>
 	<s:form method="post" action="InquiryCompleteAction">
-		お名前:<s:textfield name="name"/><br>
+		お名前:<input type="text" name="name"/><br>
 		お問い合わせの種類:<br>
 		<select name="qtype">
 			<option value="company">会社について</option>
