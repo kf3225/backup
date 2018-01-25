@@ -99,6 +99,9 @@ table {
 						<input type="radio" name="pay" value="2">クレジットカード払い
 					</td>
 				</tr>
+				<tr>
+					<td><span><s:submit value="確定" /></span></td>
+				</tr>
 			</table>
 			</s:form>
 			<div>

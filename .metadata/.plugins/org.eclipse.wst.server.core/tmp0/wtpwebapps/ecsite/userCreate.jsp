@@ -73,7 +73,7 @@ table {
 			<s:if test="errorMessage != ''">
 				<s:property value="errorMessage" escape="true"/>
 			</s:if>
-			<s:form action="UserCreateAction">
+			<s:form action="UserCreateConfirmAction">
 			<table>
 				<tr>
 					<td><label>ログインID:</label></td>

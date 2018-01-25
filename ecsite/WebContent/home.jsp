@@ -33,7 +33,7 @@ table {
 /* ===== ID LAYOUT ===== */
 #top {
 	width:60%;
-	margin:30 auto;
+	margin:30px auto;
 	border:1px solid #333;
 }
 
