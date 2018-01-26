@@ -1,0 +1,26 @@
+package com.internousdev.template.dto;
+
+public class AdminDTO {
+	private String adminUserId;
+	private String adminPassword;
+	private boolean adminFlg;
+
+	public String getAdminUserId() {
+		return adminUserId;
+	}
+	public void setAdminUserId(String adminUserId) {
+		this.adminUserId = adminUserId;
+	}
+	public String getAdminPassword() {
+		return adminPassword;
+	}
+	public void setAdminPassword(String adminPassword) {
+		this.adminPassword = adminPassword;
+	}
+	public boolean isAdminFlg() {
+		return adminFlg;
+	}
+	public void setAdminFlg(boolean adminFlg) {
+		this.adminFlg = adminFlg;
+	}
+}

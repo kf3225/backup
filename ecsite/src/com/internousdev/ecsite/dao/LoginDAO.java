@@ -26,8 +26,11 @@ public class LoginDAO {
 				loginDTO.setLoginPassword(resultSet.getString("login_pass"));
 				loginDTO.setUserName(resultSet.getString("user_name"));
 
-				if(!(resultSet.getString("login_id").equals(null))) {
+				if(!(resultSet.getString("login_id").equals(null))
+				&& resultSet.getString("account").equals("user")) {
 					loginDTO.setLoginFlg(true);
+				}else if(resultSet.getString("account").equals("admin")) {
+					loginDTO.setAdmin(true);
 				}
 			}
 		}catch(Exception e) {

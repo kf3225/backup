@@ -41,7 +41,7 @@ table {
 #header {
 	width:100%;
 	height:80px;
-	backgournd-color:black;
+	background-color:black;
 }
 
 #main {

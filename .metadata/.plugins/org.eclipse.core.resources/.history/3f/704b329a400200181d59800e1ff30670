@@ -1,0 +1,43 @@
+package com.internousdev.template.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.internousdev.template.dto.AdminDTO;
+import com.internousdev.template.util.DBConnector;
+
+public class AdminDAO {
+	private DBConnector dbConnector = new DBConnector();
+	private Connection connection = dbConnector.getConnection();
+	private AdminDTO adminDTO = new AdminDTO();
+
+	String sql = "SELECT * FROM admin_info WHERE admin_id = ? AND admin_pass = ?";
+
+	public AdminDTO getAdminUserInfo(String adminUserId, String adminPassword) throws SQLException{
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, adminUserId);
+			preparedStatement.setString(2, adminPassword);
+
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			if(resultSet.next()) {
+				adminDTO.setAdminUserId(resultSet.getString("admin_id"));
+				adminDTO.setAdminPassword(resultSet.getString("admin_pass"));
+
+				if(!(resultSet.getString("admin_id").equals(null))) {
+					adminDTO.setAdminFlg(true);
+				}
+			}
+
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			connection.close();
+		}
+
+		return adminDTO;
+	}
+}

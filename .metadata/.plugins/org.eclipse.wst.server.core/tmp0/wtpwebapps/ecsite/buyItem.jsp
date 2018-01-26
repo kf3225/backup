@@ -28,6 +28,7 @@ body {
 table {
 	text-align:center;
 	margin:0 auto;
+	border:1px solid #333;
 }
 
 /* ===== ID LAYOUT ===== */
@@ -100,7 +101,7 @@ table {
 					</td>
 				</tr>
 				<tr>
-					<td><span><s:submit value="確定" /></span></td>
+					<th><s:submit value="確定" /></th>
 				</tr>
 			</table>
 			</s:form>
