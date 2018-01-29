@@ -74,12 +74,22 @@ table {
 	<div id="main">
 		<div id="top"><p>ITEM INSERT</p></div>
 		<div>
+		<table>
 			<s:form action="ItemInsertConfirmAction">
-				<span>商品名:<s:textfield name="ItemName" /></span>
-				<span>在庫数:<s:textfield name="stockCount" /></span>
-				<span>価格:<s:textfield name="ItemPrice" /></span>
-				<s:submit value="確定" />
+			<tr>
+				<td>商品名:<s:textfield name="ItemName" /></td>
+			</tr>
+			<tr>
+				<td>在庫数:<s:textfield name="stockCount" /></td>
+			</tr>
+			<tr>
+				<td>価格:<s:textfield name="ItemPrice" /></td>
+			</tr>
+			<tr>
+				<td><s:submit value="確定" /></td>
+			</tr>
 			</s:form>
+		</table>
 		</div>
 		<div><p><a href="<s:url action='GoAdminAction'/>">戻る</a></p></div>
 	</div>

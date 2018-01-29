@@ -5,6 +5,7 @@ public class BuyItemDTO {
 	private int id;
 	private String itemName;
 	private String itemPrice;
+	private String stockCount;
 
 	public int getId() {
 		return id;
@@ -23,6 +24,12 @@ public class BuyItemDTO {
 	}
 	public void setItemPrice(String itemPrice) {
 		this.itemPrice = itemPrice;
+	}
+	public String getStockCount() {
+		return stockCount;
+	}
+	public void setStockCount(String stockCount) {
+		this.stockCount = stockCount;
 	}
 
 }

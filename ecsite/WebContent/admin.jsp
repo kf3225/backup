@@ -29,6 +29,11 @@ body {
 table {
 	text-align:center;
 	margin:0 auto;
+	border:1px solid #333;
+}
+
+table tr {
+	border:1px solid #333;
 }
 
 /* ===== ID LAYOUT ===== */
@@ -70,20 +75,27 @@ table {
 	<div id="main">
 		<div id="top"><p>ADMIN</p></div>
 		<div>
+			<s:form action="AdminItemDeleteAction">
 			<table>
-			<s:iterator value="">
+			<s:iterator value="session.buyItemList">
 				<tr>
-					<td><span>商品名</span></td>
-					<td><span>値段</span></td>
-					<td><span>在庫</span></td>
+					<th></th>
+					<th>商品名</th>
+					<th>値段</th>
+					<th>在庫</th>
 				</tr>
 				<tr>
-					<td><span><s:property value="itemName" /></span></td>
-					<td><span><s:property value="itemPrice" /></span></td>
-					<td><span><s:property value="stockCount" /></span></td>
+					<td><input type="radio" name="delete" value="id"></td>
+					<td><s:property value="itemName" /></td>
+					<td><s:property value="itemPrice" /><span>円／個</span></td>
+					<td><s:property value="stockCount" /><span>個</span></td>
 				</tr>
 			</s:iterator>
+				<tr>
+					<s:submit value="削除" />
+				</tr>
 			</table>
+			</s:form>
 			<p>商品追加は<a href='<s:url action="ItemInsertAction"/>'>こちら</a></p>
 			<p>ログアウトは<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
 		</div>

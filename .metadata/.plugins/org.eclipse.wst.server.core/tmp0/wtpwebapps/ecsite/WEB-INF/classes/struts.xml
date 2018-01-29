@@ -74,6 +74,12 @@
 			<result name="error">itemInsert.jsp</result>
 		</action>
 
+		<!-- ItemSelectAction -->
+		<action name="ItemSelectAction" class="com.internousdev.ecsite.action.ItemSelectAction"
+		method="execute">
+			<result name="success">itemSelect.jsp</result>
+		</action>
+
 		<!-- MyPageAction -->
 		<action name="MyPageAction" class="com.internousdev.ecsite.action.MyPageAction"
 		method="execute">
@@ -85,6 +91,12 @@
 		<action name="GoAdminAction" class="com.internousdev.ecsite.action.GoAdminAction"
 		method="execute">
 			<result name="success">admin.jsp</result>
+		</action>
+
+		<!-- AdminItemDeleteAction -->
+		<action name="AdminItemDeleteAction" class="com.internousdev.ecsite.action.AdminItemDeleteAction"
+		method="execute">
+			<result name="success">deleteComplete.jsp</result>
 		</action>
 
 		<!-- LoginAction -->

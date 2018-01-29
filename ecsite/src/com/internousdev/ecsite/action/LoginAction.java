@@ -1,5 +1,6 @@
 package com.internousdev.ecsite.action;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -21,25 +22,24 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	public String execute() {
 		String result = ERROR;
 		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
-		BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
+		ArrayList<BuyItemDTO> buyItemDTO = buyItemDAO.getBuyItemInfo();
 		session.put("loginUser", loginDTO);
 
 		if(((LoginDTO) session.get("loginUser")).getLoginFlg()) {
 			result = SUCCESS;
 
 			session.put("login_user_id", loginDTO.getLoginId());
-			session.put("id", buyItemDTO.getId());
-			session.put("buyItem_name", buyItemDTO.getItemName());
-			session.put("buyItem_price", buyItemDTO.getItemPrice());
+			session.put("id", "loginComplete");
+			session.put("buyItemList", buyItemDTO);
+
 
 			return result;
 		}else if(((LoginDTO) session.get("loginUser")).getAdmin()) {
 			result = "admin";
 
 			session.put("login_user_id", loginDTO.getLoginId());
-			session.put("id", buyItemDTO.getId());
-			session.put("buyItem_name", buyItemDTO.getItemName());
-			session.put("buyItem_price", buyItemDTO.getItemPrice());
+			session.put("id", "loginComplete");
+			session.put("buyItemList", buyItemDTO);
 
 			return result;
 		}
