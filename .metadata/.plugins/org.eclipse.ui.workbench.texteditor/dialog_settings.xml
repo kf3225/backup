@@ -8,14 +8,14 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Flg"/>
+			<item value="item_"/>
 			<item value="&lt;/span&gt;"/>
 			<item value="&lt;span&gt;"/>
 			<item value="Massage"/>
 			<item value="massage"/>
 			<item value="LoginDTOList"/>
 			<item value="loginDTOList"/>
-			<item value="charset"/>
-			<item value="UTF-8"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

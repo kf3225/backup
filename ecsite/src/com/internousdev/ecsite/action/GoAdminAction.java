@@ -10,6 +10,7 @@ public class GoAdminAction extends ActionSupport implements SessionAware {
 	public Map<String, Object> session;
 	public String execute() {
 		return SUCCESS;
+		
 	}
 	public Map<String, Object> getSession() {
 		return session;

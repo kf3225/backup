@@ -30,6 +30,7 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
 			session.put("login_user_id", loginDTO.getLoginId());
 			session.put("id", "loginComplete");
+			session.put("account", loginDTO.getAccount());
 			session.put("buyItemList", buyItemDTO);
 
 
@@ -39,6 +40,7 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
 			session.put("login_user_id", loginDTO.getLoginId());
 			session.put("id", "loginComplete");
+			session.put("account", loginDTO.getAccount());
 			session.put("buyItemList", buyItemDTO);
 
 			return result;

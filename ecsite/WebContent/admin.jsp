@@ -85,10 +85,14 @@ table tr {
 					<th>在庫</th>
 				</tr>
 				<tr>
-					<td><input type="radio" name="delete" value="id"></td>
-					<td><s:property value="itemName" /></td>
-					<td><s:property value="itemPrice" /><span>円／個</span></td>
-					<td><s:property value="stockCount" /><span>個</span></td>
+
+						<td>
+							<input type="radio" name="delete" value="<s:property value='id'/>">
+						</td>
+						<td><s:property value="itemName" /></td>
+						<td><s:property value="itemPrice" /><span>円／個</span></td>
+						<td><s:property value="stockCount" /><span>個</span></td>
+
 				</tr>
 			</s:iterator>
 				<tr>
@@ -96,6 +100,7 @@ table tr {
 				</tr>
 			</table>
 			</s:form>
+
 			<p>商品追加は<a href='<s:url action="ItemInsertAction"/>'>こちら</a></p>
 			<p>ログアウトは<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
 		</div>
