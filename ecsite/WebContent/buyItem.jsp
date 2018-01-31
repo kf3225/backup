@@ -26,6 +26,7 @@ body {
 }
 
 table {
+	width:30%;
 	text-align:center;
 	margin:0 auto;
 	border:1px solid #333;
@@ -71,18 +72,25 @@ table {
 	<div id="main">
 		<div id="top"><p>BUY ITEM</p></div>
 		<div>
-			<table>
 			<s:iterator value="session.buyItemList">
+			<table>
+
 				<tr>
-					<td><span>商品名</span></td>
-					<td><a href='<s:url action="ItemSelectAction"/>'><s:property value="itemName" /></a><br></td>
+					<td><span>商品名<s:property value="id"/></span></td>
+					<td><s:property value="itemName" /></td>
 				</tr>
 				<tr>
 					<td><span>値段</span></td>
 					<td><s:property value="itemPrice" /><span>円</span></td>
+					<td>
+					<s:form action="ItemSelectAction">
+						<input type="hidden" name="itemId" value="<s:property value='id'/>">
+						<s:submit value="確定" />
+					</s:form></td>
 				</tr>
-				</s:iterator>
 			</table>
+			<br>
+			</s:iterator>
 			<div>
 				<p>前画面に戻る方は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 				<p>マイページに戻る方は<a href='<s:url action="MyPageAction" />'>こちら</a></p>

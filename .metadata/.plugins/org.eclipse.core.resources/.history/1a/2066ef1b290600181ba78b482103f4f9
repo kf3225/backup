@@ -1,0 +1,31 @@
+package com.internousdev.ecsite.action;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsite.dao.GoAdminDAO;
+import com.internousdev.ecsite.dto.BuyItemDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class GoAdminAction extends ActionSupport implements SessionAware {
+	public Map<String, Object> session;
+	public ArrayList<BuyItemDTO> buyItemDTOList = new ArrayList<BuyItemDTO>();
+	private GoAdminDAO goAdminDAO = new GoAdminDAO();
+
+	public String execute() {
+		return SUCCESS;
+		buyItemDTOList = goAdminDAO.updateAdminItem();
+		session.put("buyItemList", buyItemDTOList);
+	}
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	@Override
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+}

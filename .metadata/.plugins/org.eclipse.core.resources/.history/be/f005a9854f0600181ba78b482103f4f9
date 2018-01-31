@@ -1,0 +1,36 @@
+package com.internousdev.ecsite.action;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsite.dao.ItemSelectDAO;
+import com.internousdev.ecsite.dao.ItemSelectDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ItemSelectAction extends ActionSupport implements SessionAware {
+	Map<String, Object> session;
+	private String itemId;
+	private ItemSelectDAO itemSelectDAO = new ItemSelectDAO();
+	private ArrayList<ItemSelectDTO> itemSelectDTOList = new ArrayList<ItemSelectDTO>();
+
+	public String execute() throws SQLException {
+		String item_id = itemId;
+		itemSelectDTOList = itemSelectDAO.getItemSelectInfo(item_id);
+		session.put("itemSelectDTOList", itemSelectDTOList);
+
+
+		return SUCCESS;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	@Override
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+}

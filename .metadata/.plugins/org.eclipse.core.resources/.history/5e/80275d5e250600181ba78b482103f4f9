@@ -1,0 +1,26 @@
+package com.internousdev.ecsite.dao;
+
+import java.sql.PreparedStatement;
+
+import com.internousdev.ecsite.util.DBConnector;
+import com.mysql.jdbc.Connection;
+
+public class GoAdminDAO {
+
+	private DBConnector dbConnector = new DBConnector();
+	private Connection connection = dbConnector.getConnection();
+
+	public void updateAdminItem() {
+		String sql = "SELECT * FROM item_info_transaction";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.execute();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			connection.close();
+		}
+	}
+
+}

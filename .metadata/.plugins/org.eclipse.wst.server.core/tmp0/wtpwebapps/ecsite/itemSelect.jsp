@@ -74,7 +74,7 @@ table {
 			<s:form action="BuyItemAction">
 			<table>
 				<tr>
-					<td><span>商品名</span></td>
+					<td><span>商品名<s:property value="session.id"/></span></td>
 					<td><s:property value="session.itemName" /><br></td>
 				</tr>
 				<tr>
@@ -85,8 +85,7 @@ table {
 					<td><span>購入個数</span></td>
 					<td>
 					<select name="count">
-						<option value="0" selected="selected">0</option>
-						<option value="1">1</option>
+						<option value="1" selected="selected">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
 						<option value="4">4</option>

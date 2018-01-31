@@ -80,12 +80,12 @@ table {
 			<s:form>
 			<table>
 				<tr>
-					<td><span>商品名</span></td>
-					<td><s:property value="session.buyItem_name" /></td>
+					<td><span>商品名<s:property value="session.id" /></span></td>
+					<td><s:property value="session.itemName" /></td>
 				</tr>
 				<tr>
 					<td><span>値段</span></td>
-					<td><s:property value="session.buyItem_price" /></td>
+					<td><s:property value="session.total_price" /></td>
 				</tr>
 				<tr>
 					<td><span>個数</span></td>

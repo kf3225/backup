@@ -22,16 +22,16 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	public String execute() {
 		String result = ERROR;
 		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
-		ArrayList<BuyItemDTO> buyItemDTO = buyItemDAO.getBuyItemInfo();
+		ArrayList<BuyItemDTO> buyItemDTOList = buyItemDAO.getBuyItemInfo();
 		session.put("loginUser", loginDTO);
 
 		if(((LoginDTO) session.get("loginUser")).getLoginFlg()) {
 			result = SUCCESS;
 
 			session.put("login_user_id", loginDTO.getLoginId());
-			session.put("id", "loginComplete");
+			session.put("id", "itemID");
 			session.put("account", loginDTO.getAccount());
-			session.put("buyItemList", buyItemDTO);
+			session.put("buyItemList", buyItemDTOList);
 
 
 			return result;
@@ -39,9 +39,9 @@ public class LoginAction extends ActionSupport implements SessionAware {
 			result = "admin";
 
 			session.put("login_user_id", loginDTO.getLoginId());
-			session.put("id", "loginComplete");
+			session.put("id", "itemID");
 			session.put("account", loginDTO.getAccount());
-			session.put("buyItemList", buyItemDTO);
+			session.put("buyItemList", buyItemDTOList);
 
 			return result;
 		}
