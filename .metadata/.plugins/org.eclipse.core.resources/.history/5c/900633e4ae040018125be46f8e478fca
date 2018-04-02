@@ -1,0 +1,44 @@
+package com.internousdev.ecsite.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.internousdev.ecsite.dto.AdminDTO;
+import com.internousdev.ecsite.util.DBConnector;
+
+public class AdminDAO {
+	private DBConnector dbConnector = new DBConnector();
+	private Connection connection = dbConnector.getConnection();
+	public ArrayList<AdminDTO> adminDTOList = new ArrayList<AdminDTO>();
+
+	String sql = "SELECT * FROM item_info_transaction";
+	public ArrayList<AdminDTO> getAdminInfo() throws SQLException {
+	try {
+		PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		ResultSet resultSet = preparedStatement.executeQuery();
+
+		while(resultSet.next()) {
+			AdminDTO adminDTO = new AdminDTO();
+			adminDTO.setItemName(resultSet.getString("item_name"));
+			adminDTO.setItemPrice(resultSet.getString("itemPrice"));
+			adminDTO.setStockCount(resultSet.getString("item_stock"));
+			adminDTOList.add(adminDTO);
+		}
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		connection.close();
+	}
+
+	return adminDTOList;
+	}
+	public ArrayList<AdminDTO> getAdminDTOList() {
+		return adminDTOList;
+	}
+	public void setAdminDTOList(ArrayList<AdminDTO> adminDTOList) {
+		this.adminDTOList = adminDTOList;
+	}
+}

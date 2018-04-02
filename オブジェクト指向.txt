@@ -1,0 +1,135 @@
+オブジェクト指向
+
+	[1]インスタンス化：コピー
+	[2]コンストラクタ：コピー時の窓口
+		→どんな形でコピーするか
+	[3]カプセル化：隠蔽
+		→プログラム全体を隠してほしいところだけ持ってくる
+	[4]継承：機能の拡張
+		→すでに出来上がっているプログラムをそのまま使い更に新しい機能を追加
+	[5]実装：ルール作り
+		→あるルールに則り、それに基づき実装していく
+		
+		
+	＊notepad（コマンドプロンプトでメモ帳を開く）
+		→notepad HelloWorld.javaでメモ帳でHelloWorld.java作成
+		→C:\Users\internousdev>ならそのディレクトリに作成
+	＊dir（コマンドプロンプトでファイルを閲覧）
+	
+	
+	public class HelloWorld{						//クラス名はファイル名と同じにする[HelloWorld].java
+		public static void main(String[] args){		//"S"tring（大文字）
+			System.out.println("HelloWorld");		//"S"ystem（大文字）、ダブルクオーテーション、セミコロン
+		}
+	}
+	
+	○○.java：人間可読、コンピュータ不可
+		｜
+		｜	読めるようにする＝コンパイル
+		｜	javac HelloWorld.java→HelloWorld.classが作成
+		↓
+	○○.class：コンピュータ可読、人間不可
+		｜
+		｜	実行　java HelloWorld.java
+		↓
+		
+	
+	del HelloWorld.java		
+	del HelloWorld.class	削除(delete)
+	
+	
+	[1]インスタンス化：プログラムをコピーし他の場所で使用していく
+		インスタンス化の公式
+		String s = new String("Hello");
+		System.out.println(s);
+		
+		new（インスタンス化）：newの次のもの（String ("Hello"))を=の前のものにコピーする
+		
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));	//import
+		System.out.println("入力してください");
+		String t = br.readLine();	//スロー宣言の追加
+		System.out.println(t);
+		
+		
+	[2]コンストラクタ：インタスタンス化したコピーの窓口
+		インスタンス化する際、Javaでコンストラクタ化して呼び出す
+		●public Person(){}	//デフォルトコンストラクタ
+         -----------------------------------------
+         Person taro = new Person(); //書かなくても上のようなデフォルトコンストラクタが作成される
+        
+        
+        ●public class Person{
+             public String name = null;              //name=フィールド変数（クラス内限定でコンストラクタやメソッドで自由に使える）
+             public int age = 0;                    //age=フィールド変数
+             
+        　   public Person(String name, int age){    //Person=引数
+         　      this.name = name;                   //name=ローカル変数（ここで定義されたコンストラクタ内orメソッド内でしか有効でない変数）
+           　    this.age = age;                     //age=ローカル変数
+        　   }
+            public Person(String name){
+                this.name = name;                   //name=ローカル変数67行目nameと別物
+                this.age = 0;                       //age=ローカル変数
+            }
+         }
+        　-----------------------------------------
+        　Person jiro new Person("jiro", 20); //上のコンストラクタが必要になる
+        
+        ＊this.nameやthis.ageのthisは「このクラス」のという意味（63行目のnameと64行目のage）
+        　thisはフィールド変数を指定してくれる
+		
+		public Person(String name, int age){
+			this.name = name;
+			this.age = age;
+		}
+		
+		コンストラクタを多く定義すること＝オーバーロード＝多重定義
+        
+        
+    [3]カプセル化：隠蔽する
+        普段は隠れているが取り出したいときに取り出せる
+        隠蔽→取り出すor登録
+        
+        アクセス修飾子
+        public：すぺてのクラスに対してプログラムを見せる
+        private：そのクラスの中でしか見せない（パッケージ内＞○○.Java＞クラス内）
+        protected：一部にだけ見せられる
+        何も書かない（デフォルト）:パッケージの中のプログラムだけ見せる
+        
+            ＊パッケージ：Javaのファイルを分ける方法（あるファイルにはアクションという機能を持ったファイルだけパッケージするなど）
+        
+        スコープ：どこまでプログラムを見せるか
+        
+        private String name = null;
+        private int age = 0;
+        
+        public String getName(){    //get=取得　getの後は大文字 getメソッドはsetで受け取ったものをそのまま登録したいので引数なし（）部分
+            return this.name;       //呼び出し元にreturnの隣のものを返す
+        }
+        public void setName(String name){      //set=登録　setの後は大文字　setメソッドの返り値は何も戻さないのでvoid
+            This.name = name;
+        }
+        
+        カプセル化されたクラスは他のクラスから受け取った情報を書き換えたり新たな情報を作ったりしてはいけない
+        
+        
+    [4]継承：拡張
+        MP3Player      ⇒ SmartPhone　  ⇒  Iphone
+        ・再生(Play)       電話(call)
+        ・停止(Stop)       メール(mail)
+        ・次へ(Next)       写真(pic)
+        ・戻る(back)       ネット(net)
+        　↓                  ↓
+         親クラス           子クラス
+         スーパークラス      サブクラス
+         
+         スーパークラスの上書き＝オーバーライド
+         
+         
+    [5]実装：ルール作り（タスク作り）
+        class:処理
+        
+        interface:ルール作り
+        abstract:抽象的な
+        
+        imprements:実装

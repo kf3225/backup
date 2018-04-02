@@ -25,11 +25,13 @@ public class LoginDAO {
 				loginDTO.setLoginId(resultSet.getString("login_id"));
 				loginDTO.setLoginPassword(resultSet.getString("login_pass"));
 				loginDTO.setUserName(resultSet.getString("user_name"));
+				loginDTO.setAccount(resultSet.getString("account"));
 
 				if(!(resultSet.getString("login_id").equals(null))
 				&& resultSet.getString("account").equals("user")) {
 					loginDTO.setLoginFlg(true);
-				}else if(resultSet.getString("account").equals("admin")) {
+				}else if(!(resultSet.getString("login_id").equals(null))
+						&& resultSet.getString("account").equals("admin")) {
 					loginDTO.setAdmin(true);
 				}
 			}
