@@ -1,2 +1,4 @@
-GitRepositoriesView.GitDirectories=C\:\\Users\\internousdev\\Desktop\\workspace\\workspace-fujita\\backup\\.git;
+GitRepositoriesView.GitDirectories=C\:\\Users\\K\\Desktop\\workspace\\backup\\.git;C\:\\Users\\internousdev\\Desktop\\workspace\\workspace-fujita\\backup\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;C\:\\Users\\internousdev\\Desktop\\workspace\\workspace-fujita\\backup\\.git;
+core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

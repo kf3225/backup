@@ -109,7 +109,7 @@
                 <li><a href="/release-guidelines.html">Release Guidelines</a></li>
                 <li><a href="/bylaws.html">PMC Charter</a></li>
                 <li><a href="/volunteers.html">Volunteers</a></li>
-                <li><a href="https://git-wip-us.apache.org/repos/asf?p=struts.git">Source Repository</a></li>
+                <li><a href="https://gitbox.apache.org/repos/asf?p=struts.git">Source Repository</a></li>
               </ul>
             </li>
             <li class="apache"><a href="http://www.apache.org/"><img src="/img/apache.png"></a></li>
@@ -131,7 +131,7 @@
       extensible using a plugin architecture, and ships with plugins to support
       REST, AJAX and JSON.
     </p>
-    <a href="download.cgi#struts2514.1" class="btn btn-primary btn-large">
+    <a href="download.cgi#struts2516" class="btn btn-primary btn-large">
       <img src="img/download-icon.svg"> Download
     </a>
     <a href="primer.html" class="btn btn-info btn-large">
@@ -151,29 +151,30 @@
         </p>
       </div>
       <div class="column col-md-4">
-        <h2>Apache Struts 2.5.14.1 GA</h2>
+        <h2>Apache Struts 2.5.16 GA</h2>
         <p>
-          Apache Struts 2.5.14.1 GA has been released<br/>on 30 November 2017.
+          Apache Struts 2.5.16 GA has been released<br/>on 16 March 2018.
         </p>
-        Read more in <a href="announce.html#a20171130">Announcement</a> or in
-        <a href="https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.5.14.1">Version notes</a>
+        Read more in <a href="announce.html#a20180316">Announcement</a> or in
+        <a href="https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.5.16">Version notes</a>
       </div>
       <div class="column col-md-4">
         <h2>Apache Struts 2.3.34 GA</h2>
         <p>
           It's the latest release of Struts 2.3.x which contains the latest security fixes,
-          read more in <a href="announce.html#a20170907">Announcement</a> or in
+          read more in <a href="announce-2017.html#a20170907">Announcement</a> or in
           <a href="/docs/version-notes-2334.html">Version notes</a>
         </p>
       </div>
     </div>
     <div class="row">
       <div class="column col-md-4">
-        <h2>Potential RCE vulnerability in the Showcase app</h2>
+        <h2>Immediately upgrade commons-fileupload to version 1.3.3</h2>
         <p>
-          A potential security vulnerability was reported in the Struts 1 plugin used in the Struts 2.3.x series.
-          Please read more in <a href="/docs/s2-048.html">S2-048</a> or in the official
-          <a href="announce.html#a20170707">Announcement</a>
+          The Apache Struts Team recommends to immediately upgrade your Struts 2
+          based projects to use the latest released version of Commons
+          FileUpload library, which is currently 1.3.3.
+          <a href="announce.html#a20180323">Announcement</a>
         </p>
       </div>
       <div class="column col-md-4">
@@ -181,17 +182,16 @@
         <p>
           The Struts Extras secure Multipart plugins General Availability - versions 1.1, use them to secure your
           application against critical security vulnerability reported in <a href="/docs/s2-045.html">S2-045</a>,
-          <a href="/docs/s2-046.html">S2-046</a>, read more in <a href="announce.html#a20170323">Announcement</a>
+          <a href="/docs/s2-046.html">S2-046</a>, read more in <a href="announce-2017.html#a20170323">Announcement</a>
           or in <a href="https://github.com/apache/struts-extras">README</a>
         </p>
       </div>
       <div class="column col-md-4">
-        <h2>New documentation</h2>
+        <h2>A crafted XML request can be used to perform a DoS attack when using the Struts REST plugin</h2>
         <p>
-          We have started working on a new documentation, the main task is to port existing Confluence based pages
-          to Markdown, thus will allow for easier deployment and maintenance.
-          You can help us by contributing via GitHub <a href="https://github.com/apache/struts-site">struts-site</a>
-          project. The first migrated part is the <a href="getting-started">Getting started</a> guide.
+          The Apache Security Struts Team recommends to immediately upgrade your Struts 2 based projects to use
+          the latest released version of the Apache Struts to prevent possible DoS attack when using the REST plugin.
+          <a href="announce.html#a20180327">Announcement</a>
         </p>
       </div>
     </div>
@@ -223,7 +223,7 @@
 
 <footer class="container">
   <div class="col-md-12">
-    Copyright &copy; 2000-2017 <a href="http://www.apache.org/">The Apache Software Foundation </a>.
+    Copyright &copy; 2000-2018 <a href="http://www.apache.org/">The Apache Software Foundation </a>.
     All Rights Reserved.
   </div>
   <div class="col-md-12">

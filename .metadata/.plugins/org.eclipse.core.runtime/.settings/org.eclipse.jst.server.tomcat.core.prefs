@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
-locationorg.eclipse.jst.server.tomcat.runtime.60=C:/pleiades/tomcat/6
-locationorg.eclipse.jst.server.tomcat.runtime.70=C:/pleiades/tomcat/7
-locationorg.eclipse.jst.server.tomcat.runtime.80=C:/pleiades/tomcat/8
+locationcom.pivotal.server.tc.runtime.80=C\:/Users/K/opt/pivotal/pivotal-tc-server-developer-3.2.8.RELEASE
+locationorg.eclipse.jst.server.tomcat.runtime.60=C\:/pleiades/tomcat/6
+locationorg.eclipse.jst.server.tomcat.runtime.70=C\:/pleiades/tomcat/7
+locationorg.eclipse.jst.server.tomcat.runtime.80=C\:/Users/K/Downloads/pleiades-4.7.2-ultimate-win-64bit-jre_20171225/pleiades/tomcat/8
+locationorg.eclipse.jst.server.tomcat.runtime.90=C\:/Users/K/Tomcat/apache-tomcat-9.0.4
